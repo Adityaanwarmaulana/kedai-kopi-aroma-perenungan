@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,28 +29,68 @@
         <a href="#home">Home</a>
         <a href="#about">Tentang Kami</a>
         <a href="#menu">Menu</a>
+        <a href="#products">Produk</a>
         <a href="#contact">Kontak</a>
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
+
+      <!-- Search Form start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form end -->
+
+      <!-- Shopping Cart start -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/products/1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 35K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 35K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 35K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Shopping Cart end -->
     </nav>
     <!-- Navbar end -->
 
     <!-- Hero Section start -->
     <section class="hero" id="home">
-      <main class="content">
-        <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
-        <p>
-          Nikmati kehangatan dan kenikmatan kopi pilihan kami yang disajikan
-          dengan penuh cinta. Setiap tegukan membawa kedamaian, perenunga,
-          inspirasi dan kebahagiaan.
-        </p>
-        <a href="#" class="cta">Beli Sekarang</a>
-      </main>
+      <div class="mask-container">
+        <main class="content">
+          <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
+          <p>
+            Nikmati kehangatan dan kenikmatan kopi pilihan kami yang disajikan
+            dengan penuh cinta. Setiap tegukan membawa kedamaian, perenunga,
+            inspirasi dan kebahagiaan.
+          </p>
+        </main>
+      </div>
     </section>
     <!-- Hero Section end -->
 
@@ -130,6 +170,86 @@
     </section>
     <!-- Menu Section end -->
 
+    <!-- Products Section Start -->
+    <section id="products" class="products">
+      <h2><span>Produk Unggulan</span> Kami</h2>
+      <p>
+        Kopi unggulan kami, disangrai secara sempurna, memadukan cita rasa
+        otentik dan inovatif, menyuguhkan aroma mendalam yang menggugah jiwa
+        perenungan selalu.
+      </p>
+
+      <div class="row">
+        <div class="product-card">
+          <div class="pruduct-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/1.jpg" alt="Product 1" />
+          </div>
+          <div class="product-content">
+            <h3>Kang Adit Coffee Beans</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price">IDR 35K <span>IDR 70K</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="pruduct-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/2.jpg" alt="Product 2" />
+          </div>
+          <div class="product-content">
+            <h3>Kang Adit Coffee Beans</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 45K <span>IDR 80K</span></div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="pruduct-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/3.jpg" alt="Product 3" />
+          </div>
+          <div class="product-content">
+            <h3>Kang Adit Coffee Beans</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 30K <span>IDR 65K</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Products Section End -->
+
     <!-- Contact Section start -->
     <section id="contact" class="contact">
       <h2><span>Kontak</span> Kami</h2>
@@ -187,6 +307,36 @@
       </div>
     </footer>
     <!-- Footer end -->
+
+    <!-- Modal Box Item Detail start -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/1.jpg" alt="Product 1" />
+          <div class="product-content">
+            <h3>Product 1</h3>
+            <p>
+              Setiap tegukan kopi ini mengungkapkan rahasia waktu, mengajak jiwa
+              merenungi makna hidup yang tersembunyi di balik aroma dan rasa
+              yang abadi.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 45K <span>IDR 80K</span></div>
+            <a href="#"
+              ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Box Item Detail end -->
 
     <!-- Feather Icons -->
     <script>
