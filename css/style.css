@@ -140,6 +140,21 @@ body {
 }
 
 /* Shopping Cart */
+#shopping-cart-button {
+  position: relative;
+}
+
+#shopping-cart-button .quantity-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: red;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
 .shopping-cart {
   position: absolute;
   top: 100%;
@@ -172,13 +187,12 @@ body {
 }
 
 .shopping-cart img {
-  height: 6rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
 .shopping-cart h3 {
-  font-size: 1.3rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .shopping-cart .item-price {
@@ -187,14 +201,144 @@ body {
   color: var(--primary);
 }
 
-.shopping-cart .remove-item {
-  position: absolute;
-  right: 1rem;
+.shopping-cart .cart-item #add,
+.shopping-cart .cart-item #remove {
+  display: inline-block;
+  padding: 6px 12px;
   cursor: pointer;
+  margin: 0 8px;
+  background: linear-gradient(135deg, #333, #000); /* Gradien hitam */
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 6px; /* Sudut membulat */
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-.shopping-cart .remove-item:hover {
-  color: var(--primary);
+.shopping-cart .cart-item #add:hover {
+  background: #28a745; /* Warna hijau untuk tambah */
+  border-color: #218838;
+  transform: scale(1.1); /* Efek zoom */
+}
+
+.shopping-cart .cart-item #remove:hover {
+  background: #dc3545; /* Warna merah untuk hapus */
+  border-color: #c82333;
+  transform: scale(1.1); /* Efek zoom */
+}
+
+.shopping-cart h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px 0; /* Menambah ruang atas dan bawah */
+  margin-top: 20px; /* Menurunkan posisi agar tidak mepet */
+  color: #fff;
+  background: linear-gradient(135deg, #333, #222);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Checkout Form */
+.form-container {
+  width: 100%;
+  max-width: 800px; /* Batasi lebar agar tidak terlalu lebar di layar besar */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Pastikan elemen dalamnya terpusat */
+  gap: 1rem; /* Jarak antar elemen di dalamnya */
+  border-top: 2px solid rgba(0, 0, 0, 0.2); /* Border lebih halus */
+  margin: 2rem auto; /* Tambah margin agar lebih turun */
+  padding: 1.5rem;
+  border-radius: 8px; /* Membuat sudut lebih halus */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek elegan */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Tambahkan efek transparan sedikit untuk tampilan modern */
+}
+
+.form-container h5 {
+  text-align: center;
+  font-size: 1.2rem; /* Sedikit lebih besar untuk keterbacaan */
+  font-weight: 600;
+  color: #333; /* Warna sedikit lebih gelap agar lebih jelas */
+  margin-bottom: 1rem; /* Tambahkan jarak bawah */
+}
+
+/* Form */
+.form-container form {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Label */
+.form-container label {
+  display: flex;
+  justify-content: space-between; /* Atur jarak antara label dan input */
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+  color: #444;
+  gap: 10px; /* Beri jarak antara teks dan input */
+  margin: 0.8rem 0;
+}
+
+/* Span */
+.form-container span {
+  text-align: right;
+  flex: 1; /* Agar sejajar dengan input */
+  font-weight: 500;
+}
+
+/* Input */
+.form-container input {
+  background-color: #f1f1f1; /* Warna lebih lembut */
+  padding: 8px 12px;
+  font-size: 1rem;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: royalblue;
+  box-shadow: 0px 0px 5px rgba(65, 105, 225, 0.5);
+}
+
+/* Tombol Checkout */
+.form-container .checkout-button {
+  padding: 10px 18px;
+  background: royalblue;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 25px;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(65, 105, 225, 0.3);
+}
+
+.form-container .checkout-button:hover {
+  background: #4169e1;
+  box-shadow: 0px 6px 10px rgba(65, 105, 225, 0.4);
+  transform: translateY(-2px);
+}
+
+.form-container .checkout-button.disabled {
+  background-color: #999;
+  cursor: not-allowed;
 }
 
 /* Hero Section */
@@ -541,13 +685,6 @@ body {
   font-weight: bold;
   color: #333;
   margin-top: 1rem;
-}
-
-.products .product-price span {
-  font-size: 1.4rem;
-  text-decoration: line-through;
-  color: #888;
-  margin-left: 0.5rem;
 }
 
 /* Contact Section */
